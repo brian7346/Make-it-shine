@@ -11,7 +11,7 @@ export const Sidebar = () => {
     <div className="sidebar" data-testid="sidebar">
       <div className="sidebar__generic">
         <ul>
-          <li>
+          <li data-testid="inbox">
             <span>
               <FaInbox />
             </span>{' '}
