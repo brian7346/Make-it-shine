@@ -57,7 +57,7 @@ export const useProjects = () => {
     firebase
       .firestore()
       .collection('projects')
-      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw')
+      .where('userId', '==', 'sdf23524532fewfwf')
       .orderBy('projectId')
       .get()
       .then(snapshot => {
