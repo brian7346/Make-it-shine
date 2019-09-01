@@ -63,7 +63,7 @@ export const Sidebar = () => {
       <div
         className="sidebar__middle"
         onClick={() => {
-          setSelectedProject(!showProjects);
+          setShowProjects(!showProjects);
         }}
       >
         <span>
