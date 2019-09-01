@@ -13,10 +13,10 @@ export const Projects = ({ activeValue = null }) => {
       <li
         key={project.projectId}
         data-doc-id={project.docId}
-        data-testId="project-action"
+        data-testid="project-action"
         className={
           active === project.projectId
-            ? 'active-sidebar__project'
+            ? 'active sidebar__project'
             : 'sidebar__project'
         }
         onClick={() => {
