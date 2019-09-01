@@ -18,19 +18,40 @@ export const Sidebar = () => {
     <div className="sidebar" data-testid="sidebar">
       <div className="sidebar__generic">
         <ul>
-          <li data-testid="inbox" className="inbox">
+          <li
+            data-testid="inbox"
+            className={active === 'inbox' ? 'active' : ''}
+            onClick={() => {
+              setActive('inbox');
+              setSelectedProject('INBOX');
+            }}
+          >
             <span>
               <FaInbox />
             </span>{' '}
             <span>Inbox</span>{' '}
           </li>
-          <li data-testid="today" className="today">
+          <li
+            data-testid="today"
+            className={active === 'today' ? 'active' : ''}
+            onClick={() => {
+              setActive('today');
+              setSelectedProject('TODAY');
+            }}
+          >
             <span>
               <FaRegCalendar />
             </span>{' '}
             <span>Today</span>{' '}
           </li>
-          <li data-testid="next-7" className="next-7">
+          <li
+            data-testid="next-7"
+            className={active === 'next-7' ? 'active' : ''}
+            onClick={() => {
+              setActive('next-7');
+              setSelectedProject('NEXT_7');
+            }}
+          >
             <span>
               <FaRegCalendarAlt />
             </span>{' '}
@@ -39,9 +60,14 @@ export const Sidebar = () => {
         </ul>
       </div>
 
-      <div className="sidebar__middle">
+      <div
+        className="sidebar__middle"
+        onClick={() => {
+          setSelectedProject(!showProjects);
+        }}
+      >
         <span>
-          <FaChevronDown />
+          <FaChevronDown className={!showProjects ? 'hidden-projects' : ''} />
         </span>
         <h2>Projects</h2>
       </div>
