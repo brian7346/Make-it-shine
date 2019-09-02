@@ -10,7 +10,7 @@ export const AddTask = ({
   showAddTaskMain = true,
   showShouldMain = false,
   showQuickAddTask,
-  serShowQuickAddTask
+  setShowQuickAddTask
 }) => {
   const [task, setTask] = useState('');
   const [taskDate, setTaskDate] = useState('');
@@ -57,7 +57,7 @@ export const AddTask = ({
 
   return (
     <div
-      className={showQuickAddTask ? 'add-task add-task_overlay' : 'add-task'}
+      className={showQuickAddTask ? 'add-task add-task__overlay' : 'add-task'}
       data-testid="add-task-comp"
     >
       {showAddTaskMain && (
@@ -78,12 +78,12 @@ export const AddTask = ({
               <div data-testid="quick-add-task">
                 <h2 className="header">Quick Add Task</h2>
                 <span
-                  className="add-task__cancel"
+                  className="add-task__cancel-x"
                   data-testid="add-task-quick-cancel"
                   onClick={() => {
                     setShowMain(false);
                     setShowProjectOverlay(false);
-                    serShowQuickAddTask(false);
+                    setShowQuickAddTask(false);
                   }}
                 >
                   X
