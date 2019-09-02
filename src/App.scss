@@ -32,6 +32,26 @@ $generic-bg: #bd4c3f;
 
 /* Mixins
   ============================================ */
+@mixin task-item() {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 18px;
+  color: #333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  list-style-type: none;
+  border-bottom: 1px solid #f0f0f0;
+  padding-left: 10px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9f9f9;
+  }
+}
+
 @mixin box-overlay() {
   box-shadow: $generic-box-shadow;
   position: absolute;
@@ -538,6 +558,61 @@ header {
   color: #545454;
   font-size: 14px;
   margin-left: 15px;
+}
+
+/* Task Date
+  ============================================ */
+.task-date {
+  @include box-overlay();
+  background-color: #fff;
+  width: 200px;
+  right: 0;
+
+  &__list li {
+    @include task-item();
+    padding: 0;
+
+    div:nth-child(1) {
+      padding: 10px;
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+      span:first-of-type {
+        margin-right: 10px;
+
+        svg {
+          fill: grey;
+        }
+      }
+    }
+  }
+}
+
+/* Project Overlay
+  ============================================ */
+.project-overlay {
+  @include box-overlay();
+  background-color: white;
+
+  @include mq('900px') {
+    width: 200px;
+    right: 0;
+  }
+
+  &__list li {
+    @include task-item();
+    padding: 0;
+
+    div:nth-child(1) {
+      width: 100%;
+      padding: 10px;
+    }
+  }
 }
 
 /* Add Project
