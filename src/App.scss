@@ -225,13 +225,23 @@ header {
     padding-right: 15px;
 
     &:hover .sidebar__project-delete {
-      display: block;
+      display: flex;
     }
   }
 
   &__project {
     padding: 5px 0;
     cursor: pointer;
+
+    div:nth-child(1) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    button {
+      background: transparent;
+    }
 
     &-delete {
       margin-left: auto;
@@ -472,7 +482,6 @@ header {
 
       overflow: visible;
       margin-bottom: 20px;
-      margin-top: 55px;
       border-radius: 5px;
       background-color: white;
       position: absolute;
