@@ -1,7 +1,6 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { Checkbox } from '../components/Checkbox';
-import { italic } from 'ansi-colors';
 
 beforeEach(cleanup); // clean the DOM!
 

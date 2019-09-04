@@ -3,8 +3,8 @@ import { Header } from './components/layout/Header';
 import { Content } from './components/layout/Content';
 import { ProjectsProvider, SelectedProjectProvider } from './context';
 
-export const App = ({ darkModeDefauld = false }) => {
-  const [darkMode, setDarkMode] = useState(darkModeDefauld);
+export const App = ({ darkModeDefault = false }) => {
+  const [darkMode, setDarkMode] = useState(darkModeDefault);
   return (
     <SelectedProjectProvider>
       <ProjectsProvider>
