@@ -2,7 +2,6 @@ import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import { AddTask } from '../components/AddTask';
 import { useSelectedProjectValue, useProjectsValue } from '../context';
-import { firebase } from '../firebase';
 
 jest.mock('../context', () => ({
   useSelectedProjectValue: jest.fn(() => ({
