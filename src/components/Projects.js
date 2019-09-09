@@ -13,7 +13,7 @@ export const Projects = ({ activeValue = null }) => {
       <li
         key={project.projectId}
         data-doc-id={project.docId}
-        data-testid="project-action"
+        data-testid="project-action-parent"
         className={
           active === project.projectId
             ? 'active sidebar__project'
@@ -23,11 +23,8 @@ export const Projects = ({ activeValue = null }) => {
         <div
           role="button"
           tabIndex={0}
+          data-testid="project-action"
           onClick={() => {
-            setActive(project.projectId);
-            setSelectedProject(project.projectId);
-          }}
-          onKeyDown={() => {
             setActive(project.projectId);
             setSelectedProject(project.projectId);
           }}

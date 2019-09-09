@@ -45,7 +45,7 @@ describe('<ProjectOverlay />', () => {
 
   describe('Failure', () => {
     it('does not render the project overlay with any projects', () => {
-      useSelectedProjectValue.mockImplementation(() => ({
+      useProjectsValue.mockImplementation(() => ({
         projects: []
       }));
 
