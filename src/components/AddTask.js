@@ -5,6 +5,7 @@ import { firebase } from '../firebase';
 import { useSelectedProjectValue } from '../context';
 import { ProjectOverlay } from './ProjectOverlay';
 import { TaskDate } from './TaskDate';
+import PropTypes from 'prop-types';
 
 export const AddTask = ({
   showAddTaskMain = true,
@@ -154,4 +155,11 @@ export const AddTask = ({
       )}
     </div>
   );
+};
+
+AddTask.propTypes = {
+  showAddTaskMain: PropTypes.bool,
+  shouldShowMain: PropTypes.bool,
+  showQuickAddTask: PropTypes.bool,
+  setShowQuickAddTask: PropTypes.func
 };

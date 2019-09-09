@@ -1,5 +1,6 @@
 import React from 'react';
 import { firebase } from '../firebase';
+import PropTypes from 'prop-types';
 
 export const Checkbox = ({ id }) => {
   const archivedTask = () => {
@@ -21,4 +22,8 @@ export const Checkbox = ({ id }) => {
       <span className="checkbox" />
     </div>
   );
+};
+
+Checkbox.propTypes = {
+  id: PropTypes.string.isRequired
 };

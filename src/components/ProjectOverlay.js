@@ -1,5 +1,6 @@
 import React from 'react';
 import { useProjectsValue } from '../context';
+import PropTypes from 'prop-types';
 
 export const ProjectOverlay = ({
   setProject,
@@ -28,4 +29,10 @@ export const ProjectOverlay = ({
       </div>
     )
   );
+};
+
+ProjectOverlay.propTypes = {
+  setProject: PropTypes.func,
+  showProjectOverlay: PropTypes.func,
+  setShowProjectOverlay: PropTypes.func
 };
